@@ -9,7 +9,7 @@ function App(props) {
   return (
     <div className={style['main-container']}>
       {token && <Header />}
-      <Layout />
+      <Layout token={token}/>
       {token && <Footer />}
     </div>
   );
