@@ -11,6 +11,10 @@ const Page2 = Loadable({
   loader: () => import('../views/Page2'),
   loading: Loading
 })
+const Login = Loadable({
+  loader: () => import('../views/Login'),
+  loading: Loading
+})
 
 const routes = [
   {
@@ -21,6 +25,11 @@ const routes = [
   {
     path: '/page2',
     component: Page2,
+    routeName: '页面二'
+  },
+  {
+    path: '/login',
+    component: Login,
     routeName: '页面二'
   },
 ]
