@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './index.module.scss'
 import { Route, Switch } from 'react-router-dom'
+import NotFound from '../../views/NotFound'
 
 export default class Routes extends React.Component {
   render() {
@@ -15,6 +16,7 @@ export default class Routes extends React.Component {
               return <Route exact path={item.path} component={item.component} key={item.path} />
             })
           }
+          <Route component={NotFound} />
         </Switch>
       </div>
     )
