@@ -1,5 +1,16 @@
-import Page1 from '../views/Page1'
-import Page2 from '../views/Page2'
+import Loadable from 'react-loadable';
+import { Spin } from 'antd';
+const Loading = () => <Spin />
+
+
+const Page1 = Loadable({
+  loader: () => import('../views/Page1'),
+  loading: Loading
+})
+const Page2 = Loadable({
+  loader: () => import('../views/Page2'),
+  loading: Loading
+})
 
 const routes = [
   {
