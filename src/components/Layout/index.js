@@ -7,10 +7,11 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 export default class Layout extends React.Component {
   render() {
+    const { token } = this.props
     return (
       <Router>
         <div className={style['layout']}>
-          <Menu routes={routers} />
+          <Menu routes={routers} token={token} />
           <Routes routes={routers} />
         </div>
       </Router>

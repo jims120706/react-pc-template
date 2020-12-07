@@ -7,17 +7,18 @@ import { Link } from "react-router-dom";
 
 export default class SelfMenu extends React.Component {
   render() {
-    const routes =  this.props.routes
+    const { routes, token } = this.props
     return (
-      <Menu
-        className={style['menu']}
-        onClick={this.handleClick}
-        style={{ width: 256 }}
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
-        mode="inline"
-      >
-        {/* <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
+      <>
+        { token && <Menu
+          className={style['menu']}
+          onClick={this.handleClick}
+          style={{ width: 256 }}
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          mode="inline"
+        >
+          {/* <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
           <Menu.ItemGroup key="g1" title="Item 1">
             <Menu.Item key="1">Option 1</Menu.Item>
             <Menu.Item key="2">Option 2</Menu.Item>
@@ -27,12 +28,13 @@ export default class SelfMenu extends React.Component {
             <Menu.Item key="4">Option 4</Menu.Item>
           </Menu.ItemGroup>
         </SubMenu> */}
-        {
-          routes.map((item, index) => {
-            return <Menu.Item key={index}><Link to={item.path}>{item.routeName}</Link></Menu.Item>
-          })
-        }
-      </Menu>
+          {
+            routes.map((item, index) => {
+              return <Menu.Item key={index}><Link to={item.path}>{item.routeName}</Link></Menu.Item>
+            })
+          }
+        </Menu>}
+      </>
     )
   }
 }

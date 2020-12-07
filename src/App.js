@@ -4,12 +4,13 @@ import Layout from './components/Layout/index'
 import Footer from './components/Footer/index'
 import { connect } from 'react-redux'
 
-function App() {
+function App(props) {
+  const { token } = props
   return (
     <div className={style['main-container']}>
-      <Header />
+      {token && <Header />}
       <Layout />
-      <Footer />
+      {token && <Footer />}
     </div>
   );
 }
