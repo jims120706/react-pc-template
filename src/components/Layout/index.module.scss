@@ -1,4 +1,8 @@
 .layout {
   width: 100%;
   flex: 1;
+  display: flex;
+  >.router {
+    flex: 1;
+  }
 }
