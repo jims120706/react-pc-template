@@ -1,4 +1,5 @@
 import React from 'react'
+import style from './index.module.scss'
 
 export default class Layout extends React.Component {
   constructor(props) {
@@ -6,7 +7,7 @@ export default class Layout extends React.Component {
   }
   render() {
     return (
-      <div>我是中间</div>
+      <div className={style['layout']}>我是中间</div>
     )
   }
 }
