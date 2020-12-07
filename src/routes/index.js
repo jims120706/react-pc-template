@@ -20,12 +20,14 @@ const routes = [
   {
     path: '/page1',
     component: Page1,
-    routeName: '页面一'
+    routeName: '页面一',
+    auth: true
   },
   {
     path: '/page2',
     component: Page2,
-    routeName: '页面二'
+    routeName: '页面二',
+    auth: true
   },
   {
     path: '/login',

@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
       <Router>
         <div className={style['layout']}>
           <Menu routes={routers} token={token} />
-          <Routes routes={routers} />
+          <Routes routes={routers} token={token} />
         </div>
       </Router>
     )

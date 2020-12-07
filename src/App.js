@@ -20,10 +20,7 @@ const mapStateToProps = store => {
     token: store.userReducer.token
   }
 }
-const mapDispatchToProps = {
-}
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(App);
