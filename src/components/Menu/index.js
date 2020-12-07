@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 
 export default class SelfMenu extends React.Component {
   render() {
-    const { routes, token } = this.props
+    let { routes, token } = this.props
+    routes = routes.filter(item => !item.notMenu)
     return (
       <>
         { token && <Menu

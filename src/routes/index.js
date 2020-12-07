@@ -32,7 +32,8 @@ const routes = [
   {
     path: '/login',
     component: Login,
-    routeName: '页面二'
+    routeName: '页面二',
+    notMenu: true,
   },
 ]
 
