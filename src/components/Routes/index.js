@@ -6,7 +6,7 @@ import NotFound from '../../views/NotFound'
 export default class Routes extends React.Component {
   render() {
     const { routes, token } = this.props
-    console.log("props", this.props)
+    // console.log("props", this.props)
     return (
       // <div className={style['routes']}>路由</div>
       <div className={style['routes']}>
