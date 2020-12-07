@@ -3,6 +3,14 @@ import style from './index.module.scss'
 import { connect } from 'react-redux'
 
 class Login extends React.Component {
+  constructor(props) {
+    super(props)
+    const { history } = this.props
+    const token = sessionStorage.getItem('token') || ''
+    if(token) {
+      history.replace('/page1')
+    }
+  }
   login = () => {
     const { login, history } = this.props
     console.log('this.props', this.props)
@@ -23,7 +31,7 @@ class Login extends React.Component {
 const mapDispatchToProps = {
   login: (value = '') => {
     return { type: 'SET_TOKEN', module: 'user', value }
-  }
+  },
 }
 
 export default connect(
