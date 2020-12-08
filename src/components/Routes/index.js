@@ -14,7 +14,7 @@ export default class Routes extends React.Component {
           {
             routes && routes.length > 0 && routes.map((item) => {
               return <Route exact path={item.path} render={props => {
-                return item.auth ? (token ? <item.component {...props} /> : <Redirect to={{pathname: '/login'}} />) : <item.component {...props} />
+                return item.auth ? (token ? item.redirect ? <Redirect to={{ pathname: item.redirect }} /> : <item.component {...props} /> : <Redirect to={{ pathname: '/login' }} />) : <item.component {...props} />
               }} key={item.path} />
             })
           }
